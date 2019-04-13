@@ -5,6 +5,7 @@ from . import views#We're importing Django's function path and all of out
 urlpatterns = [
     path('', views.post_list, name='post_list'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    path('post/new/', views.post_new, name='post_new'),
 ]
 #Here we assigning a view called post_list to the root URL. This URL pattern will
 #match an empty string and the Django URL resolver will ignore the domain name the prefixes
